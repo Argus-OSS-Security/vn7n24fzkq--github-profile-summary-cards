@@ -1,12 +1,13 @@
 name: Publish wiki
 
-on:
-  push:
-    branches: [ main ]
-    paths:
-      - wiki/**
-      - .github/workflows/publish-wiki.yml
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   push:
+#     branches: [ main ]
+#     paths:
+#       - wiki/**
+#       - .github/workflows/publish-wiki.yml
+# 
 concurrency:
   group: publish-wiki
   cancel-in-progress: true

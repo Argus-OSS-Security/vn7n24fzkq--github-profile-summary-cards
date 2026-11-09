@@ -6,13 +6,14 @@ name: Manual Release
 #     GitHub Release is cut from it for action consumers to pin.
 # `main` stays the development branch (CI + Vercel preview only, no auto production deploy).
 
-on:
-  workflow_dispatch:
-    inputs:
-      tag_name:
-        description: 'Tag name for this release (e.g. v0.8.0)'
-        required: true
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_dispatch:
+#     inputs:
+#       tag_name:
+#         description: 'Tag name for this release (e.g. v0.8.0)'
+#         required: true
+# 
 concurrency:
   group: manual-release
   cancel-in-progress: false
